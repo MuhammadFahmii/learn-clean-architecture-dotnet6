@@ -8,7 +8,7 @@ using System.Text;
 
 namespace HR.LeaveManagement.Application
 {
-    public static class ApplicationServiceRegistration
+    public static class ApplicationServicesRegistration
     {
         public static IServiceCollection ConfigureApplicationServices(this IServiceCollection services)
         {
