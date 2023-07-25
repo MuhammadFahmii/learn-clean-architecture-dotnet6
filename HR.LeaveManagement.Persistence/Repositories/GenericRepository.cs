@@ -1,9 +1,7 @@
-﻿using HR.LeaveManagement.Application.Persistence.Contracts;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using HR.LeaveManagement.Application.Persistence.Contracts;
+using Microsoft.EntityFrameworkCore;
 
 namespace HR.LeaveManagement.Persistence.Repositories
 {

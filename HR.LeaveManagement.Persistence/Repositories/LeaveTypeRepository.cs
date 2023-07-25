@@ -1,8 +1,5 @@
 ﻿using HR.LeaveManagement.Application.Persistence.Contracts;
 using HR.LeaveManagement.Domain;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace HR.LeaveManagement.Persistence.Repositories
 {
@@ -15,7 +12,4 @@ namespace HR.LeaveManagement.Persistence.Repositories
             _dbContext = dbContext;
         }
     }
-
-
 }
-

@@ -1,12 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore.Design;
+﻿using System.IO;
+using System.Reflection;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HR.LeaveManagement.Persistence
 {
@@ -22,7 +18,11 @@ namespace HR.LeaveManagement.Persistence
             var builder = new DbContextOptionsBuilder<LeaveManagementDbContext>();
             var connectionString = configuration.GetConnectionString("LeaveManagementConnectionString");
 
-            builder.UseSqlServer(connectionString);
+            builder.UseNpgsql(connectionString, b =>
+            {
+                b.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName);
+            }
+            );
 
             return new LeaveManagementDbContext(builder.Options);
         }

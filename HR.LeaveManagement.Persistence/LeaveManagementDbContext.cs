@@ -1,11 +1,9 @@
-﻿using HR.LeaveManagement.Domain;
-using HR.LeaveManagement.Domain.Common;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using HR.LeaveManagement.Domain;
+using HR.LeaveManagement.Domain.Common;
+using Microsoft.EntityFrameworkCore;
 
 namespace HR.LeaveManagement.Persistence
 {
@@ -13,7 +11,6 @@ namespace HR.LeaveManagement.Persistence
     {
         public LeaveManagementDbContext(DbContextOptions<LeaveManagementDbContext> options) : base(options)
         {
-
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
